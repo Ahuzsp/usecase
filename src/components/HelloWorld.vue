@@ -20,14 +20,8 @@
       :url-list="[url]"
       ref="aaa"
     />
-    <el-select v-model="value" placeholder="请选择">
-      <el-option
-        v-for="item in options"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value">
-      </el-option>
-    </el-select>
+  <span class="demonstration">默认不区分颜色</span>
+  <el-rate v-model="value1"></el-rate>
   </div>
 </template>
 
@@ -45,23 +39,7 @@ export default {
       // 缩放框
       showViewer: false,
       url: "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/1cb0358a55614d5f49fa442b1b056cc2.jpg?w=2452&h=920",
-              options: [{
-          value: '选项1',
-          label: '黄金糕'
-        }, {
-          value: '选项2',
-          label: '双皮奶'
-        }, {
-          value: '选项3',
-          label: '蚵仔煎'
-        }, {
-          value: '选项4',
-          label: '龙须面'
-        }, {
-          value: '选项5',
-          label: '北京烤鸭'
-        }],
-        value: ''
+      value1: null
     };
   },
   methods: {
